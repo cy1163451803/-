@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>人工智能治理资料库</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI GOVERNANCE ATLAS</p>
+          <h1>人工智能治理资料库</h1>
+          <p class="hero-text">
+            本页面以 <span id="workbook-name">人工智能治理资料库</span>
+            为基础，对工作簿中的战略规划、治理机构、原则规范、影响评估、标准认证、立法进程与国际治理材料进行统一呈现，便于开展结构化浏览、资料检索与维护跟踪。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#explorer">进入资料探索</a>
+            <a class="button ghost" href="#issues">查看问题条目</a>
+          </div>
+        </div>
+        <div class="hero-orbit">
+          <div class="orbit-card">
+            <span>数据状态</span>
+            <strong id="updated-at">--</strong>
+            <p>当前资料库快照</p>
+          </div>
+          <div class="hero-glow glow-a"></div>
+          <div class="hero-glow glow-b"></div>
+        </div>
+      </header>
+
+      <main>
+        <section class="stats-grid" id="stats-grid"></section>
+
+        <section class="section two-col">
+          <div class="panel">
+            <div class="section-head">
+              <p class="eyebrow">Topic Mix</p>
+              <h2>七类主题分布</h2>
+            </div>
+            <div id="topic-bars" class="bar-list"></div>
+          </div>
+
+          <div class="panel">
+            <div class="section-head">
+              <p class="eyebrow">Signals</p>
+              <h2>最新高亮</h2>
+            </div>
+            <div id="spotlight-list" class="spotlight-list"></div>
+          </div>
+        </section>
+
+        <section class="section two-col">
+          <div class="panel">
+            <div class="section-head">
+              <p class="eyebrow">Timeline</p>
+              <h2>按年份看资料累积</h2>
+            </div>
+            <div id="timeline-chart" class="timeline-chart"></div>
+          </div>
+
+          <div class="panel">
+            <div class="section-head">
+              <p class="eyebrow">Regions</p>
+              <h2>重点国家与国际机构</h2>
+            </div>
+            <div id="country-cloud" class="country-cloud"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="panel explorer-panel" id="explorer">
+            <div class="section-head">
+              <p class="eyebrow">Explorer</p>
+              <h2>资料探索区</h2>
+              <p class="section-text">
+                可按主题、国家和关键词筛选。页面默认展示最近更新的条目，适合演示知识库覆盖面和维护状态。
+              </p>
+            </div>
+
+            <div class="filters">
+              <label>
+                <span>主题</span>
+                <select id="topic-filter"></select>
+              </label>
+              <label>
+                <span>国家/地区</span>
+                <select id="country-filter"></select>
+              </label>
+              <label class="search-box">
+                <span>关键词</span>
+                <input id="keyword-input" type="search" placeholder="例如：GPAI / 欧盟 / 风险评估" />
+              </label>
+            </div>
+
+            <div class="results-meta">
+              <strong id="result-count">0</strong>
+              <span>条匹配记录</span>
+            </div>
+            <div id="record-grid" class="record-grid"></div>
+          </div>
+        </section>
+
+        <section class="section two-col" id="issues">
+          <div class="panel">
+            <div class="section-head">
+              <p class="eyebrow">Issue Queue</p>
+              <h2>待修问题条目</h2>
+            </div>
+            <div id="issue-list" class="issue-list"></div>
+          </div>
+
+          <div class="panel">
+            <div class="section-head">
+              <p class="eyebrow">Recent Entries</p>
+              <h2>最近 12 条资料</h2>
+            </div>
+            <div id="recent-list" class="recent-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./hosted-app.js"></script>
+  </body>
+</html>
